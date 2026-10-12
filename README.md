@@ -222,4 +222,5 @@ Contributions, bug reports, and feature pull requests are welcome! Feel free to 
 This project is open-source and released under the [MIT License](LICENSE). 
 
 Feel free to use, modify, and distribute this software for academic, research, or commercial purposes.
+
 ---
