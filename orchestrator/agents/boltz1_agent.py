@@ -1,6 +1,6 @@
 # orchestrator/agents/boltz1_agent.py
 
-class BoltzAgent:
+class Boltz1Agent:
     """
     Boltz-1 structural biomolecular prediction engine (MIT Licensed).
     Handles protein structure folding and binding pocket validation without commercial restrictions.
