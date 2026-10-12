@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+# Install system dependencies and C++ toolchain ONCE
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libgl1 \
+    libxrender1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install heavy scientific libraries
+RUN pip install --no-cache-dir rdkit pandas numpy fastapi uvicorn requests

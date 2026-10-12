@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  cheminformatics_sandbox:
+    build: ./cheminformatics_sandbox
+    ports:
+      - "8000:8000"
+    networks:
+      - nexusbio-net
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_GATEWAY_URL=http://cheminformatics_sandbox:8000
+    depends_on:
+      - cheminformatics_sandbox
+    networks:
+      - nexusbio-net
+
+networks:
+  nexusbio-net:
+    driver: bridge
